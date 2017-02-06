@@ -47,7 +47,7 @@ function createTemplate(data){
             <div>
                 ${date}
             </div>
-           ${content}
+                ${content}
             </div>
         </body>
     </html>`
@@ -62,7 +62,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function(req,res){
-   res.sendFile(createTemplate(articlOne));
+   res.send(createTemplate(articlOne));
 });
 app.get('/article-two',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
